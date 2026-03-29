@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -7,7 +6,7 @@
   <title>itispsycho – Raum zwischen den Gesprächen</title>
   <meta name="theme-color" content="#efe7da" />
   <style>
-    :root{
+    :Wurzel{
       --bg:#f2ecdf;
       --bg2:#ebe1d1;
       --card:#f8f3ea;
@@ -24,11 +23,11 @@
     }
     *{box-sizing:border-box}
     html,body{
-      margin:0;
-      min-height:100%;
+      Rand: 0;
+      Mindesthöhe: 100 %;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
+      Farbe:var(--text);
+      Hintergrund:
         radial-gradient(circle at top, rgba(255,255,255,.35), transparent 30%),
         linear-gradient(180deg, var(--bg), var(--bg2) 60%, #f6f1e8);
     }
@@ -38,31 +37,482 @@
       margin:0 auto;
       padding:18px 16px 28px;
     }
-    .hero{
+    .Held{
       padding:14px 8px 12px;
     }
-    .eyebrow{
+    .Augenbraue{
       text-transform:uppercase;
-      letter-spacing:.18em;
-      font-size:12px;
-      color:var(--muted);
+      Buchstabenabstand: 0,18em;
+      Schriftgröße: 12px;
+      Farbe:var(--muted);
       margin-bottom:10px;
     }
     h1{
       margin:0 0 10px;
-      font-size:31px;
-      line-height:1.04;
-      font-weight:650;
+      Schriftgröße: 31px;
+      Zeilenhöhe: 1,04;
+      Schriftstärke: 650;
     }
     .sub{
-      margin:0;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.5;
+      Rand: 0;
+      Farbe:var(--muted);
+      Schriftgröße: 15px;
+      Zeilenhöhe: 1,5;
     }
-    .card{
+    .Karte{
       margin-top:14px;
-      background:rgba(248,243,234,.84);
+      Hintergrund:rgba(248,243,234,.84);
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:16px;
+      box-shadow:var(--shadow);
+      Hintergrundfilter: Unschärfe(8px);
+    }
+    .Willkommen{
+      background:linear-gradient(180deg, rgba(248,243,234,.95), rgba(241,230,214,.9));
+    }
+    .section-title{
+      margin:0 0 12px;
+      Schriftgröße: 18px;
+      Schriftstärke: 640;
+      Buchstabenabstand: .01em;
+    }
+    .section-kicker{
+      margin:0 0 8px;
+      Farbe:var(--muted);
+      Schriftgröße: 12px;
+      text-transform:uppercase;
+      Buchstabenabstand: 0,14em;
+    }
+    .states{
+      Anzeige: Raster;
+      grid-template-columns:1fr 1fr;
+      Abstand: 10px;
+    }
+    .state-btn{
+      Aussehen: keins;
+      border:1px solid var(--line);
+      Hintergrund: linearer Gradient(180deg, #fbf8f2, #f4ece0);
+      border-radius:20px;
+      Mindesthöhe: 98px;
+      padding:14px 12px;
+      text-align:left;
+      Farbe:var(--text);
+      Cursor:Zeiger;
+      box-shadow:0 6px 14px rgba(92,72,47,.05);
+      Übergang: 0,15 Sekunden sanft;
+    }
+    .state-btn:active{transform:scale(.99)}
+    .state-btn.active{
+      border-color:var(--accent2);
+      Hintergrund: linearer Gradient(180deg,#fffaf3,#efe2cf);
+      box-shadow:0 10px 20px rgba(92,72,47,.12);
+    }
+    .state-label{
+      Anzeige: Block;
+      Schriftgröße: 17px;
+      Schriftstärke: 620;
+      margin-bottom:5px;
+    }
+    .state-desc{
+      Anzeige: Block;
+      Schriftgröße: 13px;
+      Farbe:var(--muted);
+      Zeilenhöhe: 1,28;
+    }
+    .Pille{
+      Anzeige: Inline-Block;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      Hintergrund:var(--soft);
+      Farbe:var(--muted);
+      Schriftgröße: 12px;
+      margin-bottom:12px;
+    }
+    .reset-title{
+      margin:0 0 8px;
+      Schriftgröße: 23px;
+      Zeilenhöhe: 1,1;
+      Schriftstärke: 650;
+    }
+    .reset-intro{
+      margin:0 0 14px;
+      Farbe:var(--muted);
+      Schriftgröße: 15px;
+      Zeilenhöhe: 1,5;
+    }
+    ol{
+      Rand: 0;
+      padding-left:22px;
+    }
+    li{
+      margin:0 0 10px;
+      Zeilenhöhe: 1,5;
+    }
+    .nav{
+      Anzeige: Raster;
+      grid-template-columns:repeat(4, 1fr);
+      Abstand: 8px;
+      margin-top:14px;
+    }
+    .nav button{
+      Aussehen: keins;
+      border:1px solid var(--line);
+      Hintergrund:#f8f3ea;
+      Farbe:var(--text);
+      border-radius:16px;
+      padding:12px 8px;
+      Schriftgröße: 14px;
+      Cursor:Zeiger;
+    }
+    .nav button.active{
+      border-color:var(--accent2);
+      Hintergrund:#f1e5d3;
+    }
+    .hidden{display:none}
+    .Zitat{
+      Rand: 0;
+      Schriftgröße: 21px;
+      Zeilenhöhe: 1,4;
+      Buchstabenabstand: .01em;
+    }
+    .klein{
+      margin:10px 0 0;
+      Farbe:var(--muted);
+      Schriftgröße: 14px;
+      Zeilenhöhe: 1,55;
+    }
+    textarea{
+      Breite: 100 %;
+      margin-top:8px;
+      Mindesthöhe: 120px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      Hintergrund: #fcf8f2;
+      Farbe:var(--text);
+      padding:14px;
+      Schriftart: erben;
+      resize:vertical;
+      Umriss: keiner;
+    }
+    .chips{
+      Anzeige:flex;
+      Abstand: 8px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+    .Chip{
+      Anzeige: Inline-Flex;
+      align-items:center;
+      border:1px solid var(--line);
+      Hintergrund: #fbf7f0;
+      border-radius:999px;
+      padding:8px 12px;
+      Schriftgröße: 13px;
+      Farbe:var(--text);
+    }
+    .Liste{
+      Rand: 0;
+      padding-left:18px;
+      Farbe:var(--text);
+    }
+    .list li{
+      margin-bottom:8px;
+      Schriftgröße: 14px;
+      Farbe:var(--muted);
+    }
+    .two-col{
+      Anzeige: Raster;
+      grid-template-columns:1fr 1fr;
+      Abstand: 10px;
+    }
+    .mini-card{
+      border:1px solid var(--line);
+      border-radius:18px;
+      Hintergrund: #fbf7f0;
+      Innenabstand: 12px;
+    }
+    .mini-title{
+      margin:0 0 6px;
+      Schriftgröße: 15px;
+      Schriftstärke: 620;
+    }
+    .mini-text{
+      Rand: 0;
+      Schriftgröße: 13px;
+      Zeilenhöhe: 1,45;
+      Farbe:var(--muted);
+    }
+    .Notiz{
+      border-left:3px solid var(--accent2);
+      padding-left:12px;
+      margin-top:10px;
+      Farbe:var(--muted);
+      Schriftgröße: 14px;
+      Zeilenhöhe: 1,5;
+    }
+    .Fußzeile{
+      text-align:center;
+      Farbe:var(--muted);
+      Schriftgröße: 12px;
+      Zeilenhöhe: 1,45;
+      padding:18px 8px 6px;
+    }
+    .save-btn{
+      margin-top:12px;
+      Aussehen: keins;
+      Rahmen: keiner;
+      Hintergrund:var(--accent3);
+      Farbe: #fff;
+      padding:12px 14px;
+      border-radius:16px;
+      Schriftgröße: 14px;
+      Cursor:Zeiger;
+    }
+    .gespeichert{
+      margin-top:10px;
+      Schriftgröße: 13px;
+      Farbe:var(--ok);
+      Anzeige: keine;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="hero">
+      <div class="eyebrow">itispsycho</div>
+      <h1>Raum zwischen<br>den Gesprächen</h1>
+      <p class="sub">Ein ruhiger digitaler Zwischenraum für Klient:innen. Nicht als Ersatz für Begleitung, sondern als stimmige Unterstützung im Alltag – bodennah, klar und ohne Überforderung.</p>
+    </section>
+
+    <section class="card welcome">
+      <p class="section-kicker">Willkommen</p>
+      <h2 class="section-title">Du musst hier nichts leisten.</h2>
+      <p class="small" style="margin-top:0">Diese Seite ist dafür da, einen Zustand etwas zu ordnen. Nicht alles lösen. Nicht alles verstehen. Erst ankommen, dann weiterschauen.</p>
+      <div class="chips">
+        <span class="chip">ruhig</span>
+        <span class="chip">körpernah</span>
+        <span class="chip">klar</span>
+        <span class="chip">ohne Druck</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Wie ist es gerade?</h2>
+      <div class="states" id="states"></div>
+    </section>
+
+    <section class="card">
+      <div class="pill" id="durationPill">Begleit-Reset · 60 Sek</div>
+      <h3 class="reset-title" id="resetTitle"></h3>
+      <p class="reset-intro" id="resetIntro"></p>
+      <ol id="resetSteps"></ol>
+      <div class="note" id="resetClosing"></div>
+    </section>
+
+    <div class="nav">
+      <button id="tab-anker" class="active" onclick="showPanel('anker')">Anker</button>
+      <button id="tab-stille" onclick="showPanel('stille')">Stille</button>
+      <button id="tab-checkin" onclick="showPanel('checkin')">Einchecken</button>
+      <button id="tab-begleitung" onclick="showPanel('begleitung')">Rahmen</button>
+    </div>
+
+    <section class="card" id="panel-anker">
+      <h2 class="section-title">Anker</h2>
+      <p class="quote" id="anchorText">Körper zuerst, dann Bedeutung.</p>
+      <p class="small">Manchmal entsteht Ordnung nicht durch Analyse, sondern dadurch, dass das Nervensystem wieder etwas Boden bekommt.</p>
+    </section>
+
+    <section class="card hidden" id="panel-stille">
+      <h2 class="section-title">Stille</h2>
+      <p class="quote" id="lyricText">Du musst nicht sofort verstehen. Du darfst erst spüren.</p>
+      <p class="small">Ein Satz. Kein Druck. Kein Feed. Nur ein kleiner innerer Raum.</p>
+    </section>
+
+    <section class="card hidden" id="panel-checkin">
+      <h2 class="section-title">Einchecken</h2>
+      <p class="small">Was ist heute spürbar? Ein Satz genügt. Der Eintrag bleibt nur auf diesem Gerät gespeichert.</p>
+      <textarea id="checkinText" placeholder="Heute ist spürbar …"></textarea>
+      <button class="save-btn" onclick="saveCheckin()">Einchecken speichern</button>
+      <div class="saved" id="savedHint">Gespeichert auf diesem Gerät.</div>
+    </section>
+
+    <section class="cardhided" id="panel-begleitung">
+      <h2 class="section-title">Rahmen deiner Begleitung</h2>
+      <div class="two-col">
+        <div class="mini-card">
+          <p class="mini-title">Wofür diese App da ist</p>
+          <p class="mini-text">Zur kleinen Regelung zwischen zwei Gesprächen. Damit du im Alltag einen ruhigen Zugriff auf Orientierung, Boden und Selbstkontakt hast.</p>
+        </div>
+        <div class="mini-card">
+          <p class="mini-title">Wofür sie nicht da ist</p>
+          <p class="mini-text">Sie ersetzt keine Sitzung, keine Beziehung und keine individuelle Begleitung. Sie ist ein Zwischenraum – nicht das Ganze.</p>
+        </div>
+      </div>
+      <div class="note">Wenn du merkst, dass du akut bist oder dich nicht sicher fühlst, so bitte direkte menschliche Hilfe vor Ort oder kontaktiere den Notruf.</div>
+    </section>
+
+    <section class="card">
+      <p class="section-kicker">Später ausbaubar</p>
+      <h2 class="section-title">Professionelle nächste Stufe</h2>
+      <ul class="list">
+        <li>persönliche Audio-Resets mit deiner Stimme</li>
+        <li>Geschützter Klientenbereich mit Zugang</li>
+        <li>wochenbezogene Anker und Aufgaben</li>
+        <li>individuelle Übungen für Kunden</li>
+        <li>ruhiger Verlauf statt klassischem Journal-Stress</li>
+      </ul>
+    </section>
+
+    <div class="footer">itispsycho · warme Sepia-/Champagner-Tonwelt · ruhig, reduziert, nicht klinisch</div>
+  </div>
+
+  <script>
+    const states = [
+      {
+        Label: "Unruhig",
+        desc:"schnell, oben, angespannt",
+        Dauer: "60 Sek",
+        Titel: "Länger Ausatmen",
+        intro:"Wenn dein System gerade eher oben ist, braucht es meist nicht mehr Input, sondern weniger. Wir machen es kleiner und bodennäher.",
+        Schritte:[
+          „Setz dich oder bleib stehen – so, dass du dich getragen hast.“,
+          "Atme ruhig ein.",
+          „Atme etwas länger wieder aus als ein.“,
+          „Spür beim Ausatmen Kiefer, Schultern und Bauch minimal nachgeben.“
+        ],
+        Schluss: „Mehr ist gerade nicht notwendig. Erst Zustand. Dann erst alles Weitere.“
+      },
+      {
+        label:"Druck im Korper",
+        desc:"eng, fest, viel Spannung",
+        Dauer: 75 Sek.
+        Titel: "Ort statt Geschichte",
+        Intro: „Wir gehen nicht sofort in Erklärung. Erst dorthin, wo es im Körper gerade wirklich sitzt.“,
+        Schritte:[
+          „Lege eine Hand dorthin, wo der Druck am stärksten ist.“,
+          „Frag nicht warum. Nur: Wo genau? Wie groß? Eher warm, fest oder ziehend?“,
+          „Dann spür beide Füße am Boden.“,
+          „Lass Druck und Boden für 3 Atemzüge nebeneinander da sein.“
+        ],
+        Schluss: „Nicht gegen den Zustand arbeiten. Erst Beziehung dazu bekommen.“
+      },
+      {
+        label:"Gedanken laut",
+        desc:"viel Kopf, wenig Ruhe",
+        Dauer: 45 Sekunden
+        Titel: "Blick fähr",
+        Intro: „Wenn der Kopf laut ist, hilft oft nicht mehr Denken, sondern geführte Aufmerksamkeit.“,
+        Schritte:[
+          „Heb den Blick und finde 3 ruhige Dinge im Raum.“,
+          „Beschreibe sie noch einfach in Worten: hell, weich, ruhig.“,
+          „Dann spür deine Hände.“,
+          "Nicht lösen. Nur ordnen."
+        ],
+        Schluss: „Gedanken müssen nicht sofort verschwinden. Es reicht, wenn sie etwas weniger führt.“
+      },
+      {
+        label:"Leer / erschÃ¶pft",
+        desc:"matt, wenig Energie",
+        Dauer: 50 Sekunden
+        Titel: "Sanfter Kontakt",
+        intro:"Nicht aktivieren um jeden Preis. Erst freundlich Kontakt aufnehmen, ohne Leistung.",
+        Schritte:[
+          „Lehn dich an oder halte etwas Warmes in den Händen.“,
+          „Atme normal. Ohne etwas erreichen zu müssen.“,
+          „Frag dich: Was wären jetzt 5% freundlicher zu mir?“,
+          „Wähle nur einen kleinen nächsten Schritt.“
+        ],
+        Abschluss: „Freundlichkeit ist hier oft hilfreicher als Druck.“
+      }
+    ];
+
+    const anchors = [
+      „Körper zuerst, dann Bedeutung.“,
+      „Du musst es nicht sofort verstehen. Erst spüren reicht.“,
+      „Langsamer ist hier nicht weniger. Langsamer ist Führung.“,
+      „Nicht alles lösen. Erst den Zustand verändern.“
+    ];
+
+    const lyrics = [
+      „Du musst nicht sofort verstehen. Du darfst erst spüren.“,
+      „Ruhe ist nicht Leere. Sie ist ein Raum, in dem du wieder auftauchst.“,
+      „Was sich ordnet, wird oft zuerst leiser.“,
+      „Zwischen Reiz und Reaktion liegt manchmal nur ein Atemzug. Aber er zählt.“
+    ];
+
+    const statesEl = document.getElementById("states");
+    const durationEl = document.getElementById("durationPill");
+    const titleEl = document.getElementById("resetTitle");
+    const introEl = document.getElementById("resetIntro");
+    const stepsEl = document.getElementById("resetSteps");
+    const closingEl = document.getElementById("resetClosing");
+    const anchorEl = document.getElementById("anchorText");
+    const lyricEl = document.getElementById("lyricText");
+    const checkinEl = document.getElementById("checkinText");
+    const savedHintEl = document.getElementById("savedHint");
+
+    Stromstärke = 0;
+
+    function renderButtons(){
+      statesEl.innerHTML = "";
+      states.forEach((state, i) => {
+        const btn = document.createElement("button");
+        btn.className = "state-btn" + (i === current ? " active" : "");
+        btn.innerHTML = `<span class="state-label">${state.label}</span><span class="state-desc">${state.desc}</span>`;
+        btn.onclick = () => {
+          Stromstärke = i;
+          renderButtons();
+          renderReset();
+        };
+        statesEl.appendChild(btn);
+      });
+    }
+
+    function renderReset(){
+      const s = states[current];
+      durationEl.textContent = `Begleit-Reset · ${s.duration}`;
+      titleEl.textContent = s.title;
+      introEl.textContent = s.intro;
+      stepsEl.innerHTML = "";
+      s.steps.forEach(step => {
+        const li = document.createElement("li");
+        li.textContent = step;
+        stepsEl.appendChild(li);
+      });
+      closingEl.textContent = s.closing;
+      anchorEl.textContent = anchors[current % anchors.length];
+      lyricEl.textContent = lyrics[current % lyrics.length];
+    }
+
+    function showPanel(which){
+      ["anker", "stille", "checkin", "begleitung"].forEach(name => {
+        document.getElementById("panel-" + name).classList.add("hidden");
+        document.getElementById("tab-" + name).classList.remove("active");
+      });
+      document.getElementById("panel-" + which).classList.remove("hidden");
+      document.getElementById("tab-" + which).classList.add("active");
+    }
+
+    function saveCheckin(){
+      versuchen{
+        localStorage.setItem("itispsycho_checkin", checkinEl.value || "");
+        savedHintEl.style.display = "block";
+        setTimeout(() => savedHintEl.style.display = "none", 2200);
+      }catch(e){}
+    }
+
+    function loadCheckin(){
+      versuchen{
+        const v = localStorage.getItem("itispsycho_checkin");
+        if(v){ checkinEl.value = v; }
+      }catch(e){}
+    }
+
+    renderButtons();
+    renderReset();
+    loadCheckin();
+  </script>
+</body>
+</html>
